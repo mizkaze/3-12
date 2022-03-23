@@ -1,0 +1,18 @@
+<%= flash[:success] %>
+
+<body>
+  <p><strong>Title:</strong>
+  <%= @book_find.title %></p>
+  
+  <p><strong>Body:</strong>
+  <%= @book_find.body %></p>
+  <!--book_find.[カラム名]＝そのカラムのデータ(レコード)を一つ表示-->
+ 
+  <%= link_to "Edit", edit_book_path(@book_find.id) %>
+  |
+  <%= link_to "Back", books_path %>
+  |
+  <%= link_to "Destroy", book_path(@book_find.id), method: :delete, "data-confirm" => "本当に削除しますか？" %>
+</body>
+
+
